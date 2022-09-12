@@ -2,3 +2,75 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+.wrapper {
+  margin: 5px 10px 0px 10px;
+}
+
+.notes-header {
+  background: darkgrey;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.list-notes__header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.categories-notes__header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header {
+  padding: 10px 0px;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.header-button-item {
+  padding: 0px 10px;
+}
+
+.notes__btn {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.create-note__button {
+  text-align: right;
+  margin: 15px 0px 45px 0px;
+}
+
+.list-notes__row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  background-color: #e8eaf5;
+  line-height: 2.5;
+}
+
+.data-column {
+  flex: 0 0 17%;
+  text-align: left;
+}
+
+.data-column:first-child {
+  margin: 0 0 0 5%;
+}
+
+.data-column:nth-child(5) {
+  margin: 0 0 0 2%;
+}
+
+.buttons-column {
+  flex: 0 0 10%;
+}
