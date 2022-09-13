@@ -1,7 +1,8 @@
-import createTagElem from '../helpers/createTagElememt';
+import {createTagElem} from '../helpers/createTagElememt';
 import { optionsDateFormat } from '../helpers/constants';
 import { getStringDates } from '../helpers/getStringDates';
 import { createButtonsBlock } from './buttonsBlock';
+import { noteClick } from './noteClick';
 
 export function renderListNotes(notes) {
     let listItems = createTagElem('div', '', true, ['row-list'], {});
@@ -9,7 +10,7 @@ export function renderListNotes(notes) {
     const noteElements = notes.map((note) => createNote(note));
 
     listItems.append(...noteElements);
-    listItems.addEventListener('click', console.log('click'));
+    listItems.addEventListener('click', noteClick);
 
     return listItems;
 }
@@ -57,7 +58,7 @@ function createNote(note) {
             'truncate',
         ])
     );
-    item.append(createButtonsBlock());
+    item.append(createButtonsBlock(note));
 
     return item;
 }

@@ -74,3 +74,32 @@ body {
 .buttons-column {
   flex: 0 0 10%;
 }
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-name {
+  font-weight: bold
+}
+
+.note-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.note-button-item {
+  /*outline: 1px solid yellow;*/
+  padding: 5px 0;
+}
+
+.note-button-item:hover { 
+  cursor: pointer;
+}
+
+div.note-button-item i {
+  display: block;
+  padding: 5px;
+}

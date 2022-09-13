@@ -1,4 +1,4 @@
-export default function createTagElem(tag, content = '', isText = true, classNames = [], attrList = {}) {
+export function createTagElem(tag, content = '', isText = true, classNames = [], attrList = {}) {
   let elem = document.createElement(tag);
 
   isText ? (elem.textContent = content) : (elem.innerHTML = content);
