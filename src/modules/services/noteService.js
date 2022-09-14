@@ -1,30 +1,8 @@
 import { LocalStorageService } from './localStorageService';
 import { StatCategories } from '../models/statCategories';
 
-function getNotesFromLocalStorage() {
-  let notes = [];
-  const listNotes = localStorage.getItem('ListNotes');
-  if (!listNotes) {
-    throw new Error('There is no data in LocalStorage');
-  }
-
-  try {
-    notes = JSON.parse(listNotes, (key, value) => {
-      if (key === 'created') {
-        return new Date(value);
-      } else {
-        return value;
-      }
-    });
-  } catch (error) {
-    throw error;
-  }
-
-  return notes;
-}
-
 class NoteService {
-  getNotes(isActive = true) {
+  getNotes(isActive=true) {
     const notes = LocalStorageService.getNotesFromLocalStorage();
 
     return notes.filter((note) => (isActive ? !note.archived : note.archived));

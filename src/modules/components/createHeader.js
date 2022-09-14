@@ -1,6 +1,6 @@
 import { createTagElem } from '../helpers/createTagElememt';
 
-export default function createHeader() {
+export function createHeader() {
   const rootElem = createTagElem('div', '', true, ['wrapper']);
   const wrapListNotes = createTagElem('div', '', true, ['list-notes__wrapper']);
   const wrapListNotesHeader = createTagElem('div', '', true, ['list-notes__header', 'notes-header']);

@@ -1,7 +1,9 @@
 @import url('normalize.css');
+
 body {
   font-family: 'Roboto', sans-serif;
 }
+
 .wrapper {
   margin: 5px 10px 0px 10px;
 }
@@ -110,4 +112,23 @@ div.note-button-item i {
 
 .create-note__button.invisible {
   display: none;
+}
+
+
+.list-categories__row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  background-color: #E8EAF5;
+  line-height: 2.5;
+}
+
+.column-category-name {
+  flex: 0 0 25%;
+  text-align: left;
+}
+
+.column-category-active, .column-category-archived {
+  flex: 0 0 15%;
+  text-align: center;
 }
