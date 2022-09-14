@@ -75,17 +75,17 @@ body {
   flex: 0 0 10%;
 }
 
-.truncate{
+.truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .note-name {
-  font-weight: bold
+  font-weight: bold;
 }
 
-.note-buttons{
+.note-buttons {
   display: flex;
   justify-content: center;
 }
@@ -95,11 +95,19 @@ body {
   padding: 5px 0;
 }
 
-.note-button-item:hover { 
+.note-button-item:hover {
   cursor: pointer;
 }
 
 div.note-button-item i {
   display: block;
   padding: 5px;
+}
+
+.create-note__button {
+  display: block;
+}
+
+.create-note__button.invisible {
+  display: none;
 }

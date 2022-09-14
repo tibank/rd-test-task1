@@ -24,7 +24,7 @@ function getNotesFromLocalStorage() {
 }
 
 class NoteService {
-  getNotes(isActive) {
+  getNotes(isActive = true) {
     const notes = LocalStorageService.getNotesFromLocalStorage();
 
     return notes.filter((note) => (isActive ? !note.archived : note.archived));

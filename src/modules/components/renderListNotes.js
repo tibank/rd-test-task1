@@ -5,14 +5,13 @@ import { createButtonsBlock } from './buttonsBlock';
 import { noteClick } from './noteClick';
 
 export function renderListNotes(notes) {
-  let listItems = createTagElem('div', '', true, ['row-list'], {});
-
+  const listNotes = createTagElem('div', '', true, ['list-notes__items'], {});
   const noteElements = notes.map((note) => createNote(note));
 
-  listItems.append(...noteElements);
-  listItems.addEventListener('click', noteClick);
+  listNotes.append(...noteElements);
+  listNotes.addEventListener('click', noteClick);
 
-  return listItems;
+  return listNotes;
 }
 
 function createNote(note) {

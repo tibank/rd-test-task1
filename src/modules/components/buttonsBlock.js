@@ -1,7 +1,6 @@
 import { createElement } from '../helpers/createElement';
 
 export function createButtonsBlock(note) {
-  //const attributes = { 'data-noteid': note.id };
   const attributes = {};
   let divButtons = createElement({
     tagName: 'div',
