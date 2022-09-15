@@ -6,7 +6,7 @@ class App {
 
   static async startApp() {
     initDb();
-    App.rootElement.appendChild(createWrapper());
+    App.rootElement.append(createWrapper());
   }
 }
 

@@ -1,10 +1,17 @@
 import { createElement } from '../helpers/createElement';
 
 export function renderCategoryNotes(categories) {
-    const listCategories = createElement({
-        tagName: 'div',
-        className: 'list-notes__items',
-    });
+    let listCategories = document.querySelector('.categories-notes__items');
+    if (listCategories) {
+        while (listCategories.firstChild) {
+            listCategories.removeChild(listCategories.firstChild);
+        }
+    } else {
+        listCategories = createElement({
+            tagName: 'div',
+            className: 'categories-notes__items',
+        });
+    }
 
     const categoriesElements = Array.from(categories.values()).map((category) =>
         createCategoryElement(category)

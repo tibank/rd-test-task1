@@ -11,7 +11,7 @@ export function btnCreateNote() {
   elemBtndivButtons.id = 'create-note__btn';
   elemBtndivButtons.addEventListener('click', createNote);
 
-  divBtnCreate.appendChild(elemBtndivButtons);
+  divBtnCreate.append(elemBtndivButtons);
 
   return divBtnCreate;
 }

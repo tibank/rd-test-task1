@@ -28,10 +28,10 @@ export function createCategoryHeader() {
     });
     columnArchivedHeader.textContent = 'Archived';
 
-    headerElem.appendChild(columnNameHeader);
-    headerElem.appendChild(columnActiveHeader);
-    headerElem.appendChild(columnArchivedHeader);
-    rootElem.appendChild(headerElem);
+    headerElem.append(columnNameHeader);
+    headerElem.append(columnActiveHeader);
+    headerElem.append(columnArchivedHeader);
+    rootElem.append(headerElem);
 
     return rootElem;
 }

@@ -21,8 +21,8 @@ export function createWrapper() {
         tagName: 'div',
         className: 'categories-notes__wrapper',
     });
-    categoriesWrapper.appendChild(createCategoryHeader());
-    categoriesWrapper.appendChild(renderCategoryNotes(noteService.getStat()));
+    categoriesWrapper.append(createCategoryHeader());
+    categoriesWrapper.append(renderCategoryNotes(noteService.getStat()));
 
     rootWrapper.appendChild(listWrapper);
     rootWrapper.appendChild(categoriesWrapper);
