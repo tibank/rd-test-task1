@@ -40,12 +40,7 @@ body {
   padding: 0px 10px;
 }
 
-.notes__btn {
-  padding: 10px 15px;
-  font-size: 1.1rem;
-  border: 1px solid black;
-  border-radius: 5px;
-}
+
 
 .create-note__button {
   text-align: right;
@@ -83,6 +78,8 @@ body {
   white-space: nowrap;
 }
 
+
+
 .note-name {
   font-weight: bold;
 }
@@ -90,6 +87,7 @@ body {
 .note-buttons {
   display: flex;
   justify-content: center;
+  width: 30%;
 }
 
 .note-button-item {

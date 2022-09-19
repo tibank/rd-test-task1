@@ -1,4 +1,5 @@
 import NoteService from '../services/noteService';
+import { showModalNote } from './modal/showModalNote';
 import { renderCategoryNotes } from './renderCategoryNotes';
 
 function getBtnObject(target) {
@@ -23,6 +24,7 @@ export function noteClick(event) {
     const objBtn = getBtnObject(event.target);
     if (objBtn.action !== 'empty') {
         let divTask = objBtn.node.closest('div[data-note-id]');
+        console.log(divTask);
         if (divTask) {
             switch (objBtn.action) {
                 case 'edit':
@@ -31,7 +33,7 @@ export function noteClick(event) {
                     );
                     if (!divTask.hasAttribute('editing')) {
                         divTask.setAttribute('editing', '');
-                        //renderOneNote(note);
+                        showModalNote(note);
                     }
                     break;
                 case 'archived':
