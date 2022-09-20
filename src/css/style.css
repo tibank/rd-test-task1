@@ -40,11 +40,16 @@ body {
   padding: 0px 10px;
 }
 
-
-
 .create-note__button {
   text-align: right;
   margin: 15px 0px 45px 0px;
+}
+
+.notes__btn {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .list-notes__row {
@@ -78,8 +83,6 @@ body {
   white-space: nowrap;
 }
 
-
-
 .note-name {
   font-weight: bold;
 }
@@ -112,12 +115,11 @@ div.note-button-item i {
   display: none;
 }
 
-
 .list-categories__row {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 5px;
-  background-color: #E8EAF5;
+  background-color: #e8eaf5;
   line-height: 2.5;
 }
 
@@ -126,7 +128,8 @@ div.note-button-item i {
   text-align: left;
 }
 
-.column-category-active, .column-category-archived {
+.column-category-active,
+.column-category-archived {
   flex: 0 0 15%;
   text-align: center;
 }

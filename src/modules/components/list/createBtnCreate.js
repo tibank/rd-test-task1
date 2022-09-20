@@ -1,4 +1,4 @@
-import { createElement } from '../helpers/createElement';
+import { createElement } from '../../helpers/createElement';
 import { createNote } from './createNote';
 
 export function btnCreateNote() {

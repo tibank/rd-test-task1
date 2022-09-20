@@ -4,18 +4,19 @@ import { getBodyPageNote } from './getBodyPageNote';
 import { getFooterPageNote } from './getFooterPageNote';
 
 export function createModal(note) {
-    const root = createElement({ tagName: 'div', className: 'modal-layer' });
-    const elemForm = createElement({
-        tagName: 'div',
-        className: 'modal-content',
-    });
+  console.log('createModal');
+  console.log(note);
 
-    elemForm.append(getHeaderPageNote(note));
-    elemForm.append(getBodyPageNote(note));
-    elemForm.append(getFooterPageNote(note));
-    root.append(elemForm);
+  const root = createElement({ tagName: 'div', className: 'modal-layer' });
+  const elemForm = createElement({
+    tagName: 'div',
+    className: 'modal-content',
+  });
 
-    return root;
+  elemForm.append(getHeaderPageNote(note));
+  elemForm.append(getBodyPageNote(note));
+  elemForm.append(getFooterPageNote(note));
+  root.append(elemForm);
+
+  return root;
 }
-
-

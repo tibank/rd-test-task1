@@ -1,5 +1,5 @@
-import { initDb } from './services/initNotes.js';
-import { createWrapper } from './components/createWrapper.js';
+import { initDb } from './services/initNotes';
+import { createWrapper } from './components/list/createWrapper';
 
 class App {
   static rootElement = document.getElementById('root');

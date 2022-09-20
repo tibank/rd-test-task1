@@ -1,4 +1,4 @@
-import { createElement } from '../helpers/createElement';
+import { createElement } from '../../helpers/createElement';
 
 export function createButtonsBlock(note) {
   const attributes = {};

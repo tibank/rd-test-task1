@@ -14,9 +14,9 @@ export function getFieldInput(nameField, value) {
         className: 'item-note__input',
         attributes: {
             type: 'text',
-            name: nameField,
+            name: nameField.toLowerCase(),
             placeholder: nameField.toLowerCase(),
-            value
+            value,
         },
     });
     elemInput.append(fieldInput);
