@@ -2,14 +2,9 @@ import NoteService from '../../services/noteService';
 import { Note } from '../../models/note';
 import { renderOneItemListNotes } from '../list/renderOneItemListNotes';
 import { renderCategoryNotes } from '../list/renderCategoryNotes';
+import { createNoteElementList } from '../list/createNoteElementList';
 
 export function saveNote(event) {
-  const msgError = checkInputFields();
-  if (msgError !== '') {
-    alert(msgError);
-    return;
-  }
-
   const elemButton = event.target;
   const noteId = Number(elemButton.dataset.noteId);
 
@@ -31,28 +26,29 @@ function updateNoteFromForm(note) {
   note.content = form.content.value;
 }
 
+function addCreateNoteToList(note) {
+  const itemAdded = createNoteElementList(note);
+  const rowList = document.querySelector('.list-notes__items');
+
+  if (rowList) {
+    const lastItem = rowList.lastElementChild;
+    if (lastItem) {
+      lastItem.after(itemAdded);
+    } else {
+      rowList.append(itemAdded);
+    }
+  }
+}
+
 function addNote() {
   const newNote = new Note(NoteService.getMaxNoteId() + 1);
   updateNoteFromForm(newNote);
   NoteService.addNote(newNote);
+  addCreateNoteToList(newNote);
 }
 
 function updateNote(note) {
   updateNoteFromForm(note);
   NoteService.updateNote(note);
   renderOneItemListNotes(note);
-}
-
-function checkInputFields() {
-  let msgError = '';
-  const form = document.forms.note;
-  if (!form.name.value.trim()) {
-    msgError += 'Name is empty\n';
-  }
-
-  if (!form.category.selectedIndex) {
-    msgError += 'Not selected category';
-  }
-
-  return msgError;
 }

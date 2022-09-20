@@ -2,8 +2,6 @@ import { getCategoryId } from '../../helpers/getCategoryId';
 import { getStringDates } from '../../helpers/getStringDates';
 
 export function renderOneItemListNotes(note) {
-  console.log('render one item ');
-  console.log(note);
   const elemRow = document.querySelector('.list-notes__row[data-note-id="' + note.id + '"]');
 
   if (elemRow) {
