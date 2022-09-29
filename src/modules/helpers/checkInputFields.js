@@ -1,4 +1,4 @@
-function checkInputFields() {
+export function checkInputFields() {
   let msgError = '';
   const form = document.forms.note;
   if (!form.name.value.trim()) {

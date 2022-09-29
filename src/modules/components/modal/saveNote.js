@@ -3,10 +3,16 @@ import { Note } from '../../models/note';
 import { renderOneItemListNotes } from '../list/renderOneItemListNotes';
 import { renderCategoryNotes } from '../list/renderCategoryNotes';
 import { createNoteElementList } from '../list/createNoteElementList';
+import { checkInputFields } from '../../helpers/checkInputFields';
 
 export function saveNote(event) {
   const elemButton = event.target;
   const noteId = Number(elemButton.dataset.noteId);
+
+  if (checkInputFields()) {
+    alert('Fill name & category!');
+    return false;
+  }
 
   if (noteId) {
     const note = NoteService.getNoteById(noteId);
@@ -17,6 +23,8 @@ export function saveNote(event) {
     addNote();
   }
   renderCategoryNotes(NoteService.getStat());
+
+  return true;
 }
 
 function updateNoteFromForm(note) {
