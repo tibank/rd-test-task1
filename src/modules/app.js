@@ -1,9 +1,12 @@
-import notesHeader from './components/notesHeader.js';
+import { initDb } from './services/initNotes';
+import { createWrapper } from './components/list/createWrapper';
+
 class App {
   static rootElement = document.getElementById('root');
 
   static async startApp() {
-    App.rootElement.appendChild(notesHeader());
+    initDb();
+    App.rootElement.append(createWrapper());
   }
 }
 
