@@ -1,9 +1,9 @@
-import { createTagElem } from '../../helpers/createTagElememt';
 import { noteClick } from './noteClick';
 import { createNoteElementList } from './createNoteElementList';
+import { createElement } from '../../helpers/createElement';
 
 export function renderListNotes(notes) {
-  const listNotes = createTagElem('div', '', true, ['list-notes__items'], {});
+  const listNotes = createElement({ tagName: 'div', className: 'list-notes__items' });
   const noteElements = notes.map((note) => createNoteElementList(note));
 
   listNotes.append(...noteElements);
