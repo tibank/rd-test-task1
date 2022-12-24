@@ -1,4 +1,5 @@
 import { createElement } from '../../helpers/createElement';
+import { renderActiveNotes, renderArchivedNotes } from './renderNotesByType';
 
 function getActiveNotes(event) {
     console.group('active');
@@ -41,7 +42,7 @@ function createFieldSetChangeTypeNotes() {
             value: 'active',
             content: 'Active',
             checked: true,
-            handler: getActiveNotes,
+            handler: renderActiveNotes,
         })
     );
     fieldSet.appendChild(
@@ -50,7 +51,7 @@ function createFieldSetChangeTypeNotes() {
             value: 'archived',
             content: 'Archived',
             checked: false,
-            handler: getArchivedNotes,
+            handler: renderArchivedNotes,
         })
     );
 
@@ -70,12 +71,7 @@ function createFormChangeTypeNotes() {
 
 export function createRadioButtonsForm() {
     const radioButtons = createElement({ tagName: 'div', className: 'type-notes' });
-
     radioButtons.appendChild(createFormChangeTypeNotes());
-    /*     radioButtons.appendChild(createRadioButton('type-notes', 'active', 'Active', getActiveNotes));
-    radioButtons.appendChild(
-        createRadioButton('type-notes', 'archived', 'Archived', getArchivedNotes)
-    ); */
 
     return radioButtons;
 }

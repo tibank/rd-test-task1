@@ -15,7 +15,7 @@ export function createWrapper() {
     });
 
     listWrapper.appendChild(createHeader());
-    listWrapper.appendChild(renderListNotes(noteService.getNotes()));
+    listWrapper.appendChild(renderListNotes(noteService.getNotes(true)));
     listWrapper.appendChild(createRadioButtonsForm());
     listWrapper.appendChild(btnCreateNote());
 
