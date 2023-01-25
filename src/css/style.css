@@ -20,6 +20,9 @@ body {
   justify-content: flex-start;
 }
 
+.list-notes__items {
+  overflow: hidden;
+}
 .categories-notes__header {
   display: flex;
   justify-content: flex-start;

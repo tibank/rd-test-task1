@@ -1,14 +1,6 @@
 import { createElement } from '../../helpers/createElement';
 import { renderActiveNotes, renderArchivedNotes } from './renderNotesByType';
 
-function getActiveNotes(event) {
-    console.group('active');
-}
-
-function getArchivedNotes(event) {
-    console.log('archived');
-}
-
 function createRadioButton({ name, value, content, checked, handler }) {
     const buttons = createElement({ tagName: 'div', className: 'radio-btn' });
     const input = createElement({
